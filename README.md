@@ -18,4 +18,4 @@ How to host in digital ocean (using npm, node, github, unix)
 16. On mac - sudo setcap cap_net_bind_service=+ep /usr/bin/nodejs (in linux might be different)
 17. sudo npm install -g forever
 18. forever start index.js
-19. open browser on http://<ip address of droplet>
+19. open browser on http://<ip address of droplet> 
