@@ -1,5 +1,5 @@
 
-w to host in digital ocean (using npm, node, github, unix)
+How to host in digital ocean (using npm, node, github, unix)
 
 1. In digital ocean - create droplet
 2. choose the standard version and rename the droplet name
