@@ -1,4 +1,3 @@
-
 How to host in digital ocean (using npm, node, github, unix)
 
 1. In digital ocean - create droplet
@@ -20,4 +19,3 @@ How to host in digital ocean (using npm, node, github, unix)
 17. sudo npm install -g forever
 18. forever start index.js
 19. open browser on http://<ip address of droplet>
-
