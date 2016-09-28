@@ -19,3 +19,11 @@ How to host in digital ocean (using npm, node, github, unix)
             17. sudo npm install -g forever
             18. forever start index.js
             19. open browser on http://<ip address of droplet>
+            
+            
+Creating swap file when run out of RAM:
+
+sudo fallocate -l 4G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
