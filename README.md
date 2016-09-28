@@ -10,7 +10,7 @@ How to host in digital ocean (using npm, node, github, unix)
         8. usermod -a -G sudo <my user name>
             9. exit and login with ssh <my user name>@<ip address of droplet> and password for this username
             10. git clone your repository and cd into it
-            11. sudo apt install npm (if no default npm is supplied)
+            11. sudo apt install npm (if no default npm is supplied) (maybe it will fail and you need to do sudo apt-get update before)
             12.sudo apt install nodejs-legacy (if no default node is supplied)
             13. npm i
             14. sudo nano /etc/environment and add the line PORT=80 (make sure you node.js code can listen to process.env.PORT) press ctrl-x, Y, enter to save this file
