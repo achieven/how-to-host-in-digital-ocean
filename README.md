@@ -23,7 +23,10 @@ How to host in digital ocean (using npm, node, github, unix)
             
 Creating swap file when run out of RAM:   
 
-sudo fallocate -l 4G /swapfile   
-sudo chmod 600 /swapfile   
-sudo mkswap /swapfile   
-sudo swapon /swapfile   
+1. sudo fallocate -l 4G /swapfile   
+2. sudo chmod 600 /swapfile   
+3. sudo mkswap /swapfile   
+4. sudo swapon /swapfile   
+5. sudo nano /etc/fstab    
+    Add this to file:  
+    /swapfile   none    swap    sw    0   0
