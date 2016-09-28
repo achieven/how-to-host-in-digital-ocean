@@ -21,7 +21,7 @@ How to host in digital ocean (using npm, node, github, unix)
             19. open browser on http://<ip address of droplet>
             
             
-Creating swap file when run out of RAM:   
+Creating swap file when run out of RAM:   (happened to me during npm i)
 
 1. sudo fallocate -l 4G /swapfile   
 2. sudo chmod 600 /swapfile   
