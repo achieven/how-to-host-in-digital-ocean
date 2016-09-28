@@ -15,7 +15,7 @@ How to host in digital ocean (using npm, node, github, unix)
             13. npm i
             14. sudo nano /etc/environment and add the line PORT=80 (make sure you node.js code can listen to process.env.PORT) press ctrl-x, Y, enter to save this file
             15. exit and login again to apply environment variable changes
-            16. On mac - sudo setcap cap_net_bind_service=+ep /usr/bin/nodejs (in linux might be different)
+            16. sudo setcap cap_net_bind_service=+ep /usr/bin/nodejs
             17. sudo npm install -g forever
             18. forever start index.js
             19. open browser on http://<ip address of droplet>
