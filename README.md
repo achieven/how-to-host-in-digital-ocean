@@ -67,7 +67,7 @@ add_header X-Content-Type-Options nosniff;
 ssl_dhparam /etc/ssl/certs/dhparam.pem;   
     
 12. sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak    (create a backup for this in case it's not working)
-13. delete /etc/nginx/sites-available/default and create again the files with this content: 
+13. delete /etc/nginx/sites-available/default and create again the files with this content:   
 # HTTP - redirect all requests to HTTPS:
 server {
         listen 80;
