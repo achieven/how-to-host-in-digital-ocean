@@ -10,7 +10,7 @@ How to host in digital ocean (using npm, node, github, unix)
         8. usermod -a -G sudo <my user name>
             9. exit and login with ssh <my user name>@<ip address of droplet> and password for this username
             10. git clone your repository and cd into it
-            11. sudo apt install npm (if no default npm is supplied) (maybe it will fail and you need to do sudo apt-get update before)
+            11. sudo apt install npm (if no default npm is supplied) (maybe it will fail and you need to do sudo apt-get update before)    
             12.sudo apt install nodejs-legacy (if no default node is supplied)
             13. npm i
             14. sudo nano /etc/environment and add the line PORT=80 (make sure you node.js code can listen to process.env.PORT) press ctrl-x, Y, enter to save this file
@@ -41,11 +41,11 @@ Installing free ssl and configure with nginx:
 5. sudo ufw enable    
 6. Test - type to commanf line: "sudo systemctl start nginx" and browse the website (without a port) and see that there is a message "Welcome to nginx"
 7. sudo apt-get install letsencrypt    
-8. sudo letsencrypt certonly -a webroot --webroot-path=/var/www/html -d <domain_name> -d <otherdomain_name> ...    
+8. sudo letsencrypt certonly -a webroot --webroot-path=/var/www/html -d domain_name -d otherdomain_name ...    
 9. sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048    
-10. sudo nano /etc/nginx/snippets/ssl-<domain_name>.conf and write inside:    
-ssl_certificate /etc/letsencrypt/live/<domain_name>/fullchain.pem;    
-ssl_certificate_key /etc/letsencrypt/live/<domain_name>/privkey.pem;     
+10. sudo nano /etc/nginx/snippets/ssl-domain_name.conf and write inside:    
+ssl_certificate /etc/letsencrypt/live/domain_name/fullchain.pem;    
+ssl_certificate_key /etc/letsencrypt/live/domain_name/privkey.pem;     
     
     
 11. sudo nano /etc/nginx/snippets/ssl-params.conf and write inside:    
