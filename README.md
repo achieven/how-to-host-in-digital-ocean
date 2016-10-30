@@ -75,7 +75,6 @@ server {
         return 301 https://$host$request_uri;
 }
 
-# HTTPS - proxy requests on to local Node.js app:
 server {
         listen 443;
         server_name your_domain_name;
