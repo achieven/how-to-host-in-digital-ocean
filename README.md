@@ -44,27 +44,27 @@ Installing free ssl and configure with nginx:
 8. sudo letsencrypt certonly -a webroot --webroot-path=/var/www/html -d <domain_name> -d <otherdomain_name> ...    
 9. sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048    
 10. sudo nano /etc/nginx/snippets/ssl-<domain_name>.conf and write inside:    
-ssl_certificate /etc/letsencrypt/live/<domain_name>/fullchain.pem;
+ssl_certificate /etc/letsencrypt/live/<domain_name>/fullchain.pem;    
 ssl_certificate_key /etc/letsencrypt/live/<domain_name>/privkey.pem;     
     
     
 11. sudo nano /etc/nginx/snippets/ssl-params.conf and write inside:    
 
-ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-ssl_prefer_server_ciphers on;
-ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";
-ssl_ecdh_curve secp384r1;
-ssl_session_cache shared:SSL:10m;
-ssl_session_tickets off;
-ssl_stapling on;
-ssl_stapling_verify on;
-resolver 8.8.8.8 8.8.4.4 valid=300s;
-resolver_timeout 5s;
-add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";
-add_header X-Frame-Options DENY;
-add_header X-Content-Type-Options nosniff;
+ssl_protocols TLSv1 TLSv1.1 TLSv1.2;    
+ssl_prefer_server_ciphers on;    
+ssl_ciphers "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH";    
+ssl_ecdh_curve secp384r1;    
+ssl_session_cache shared:SSL:10m;    
+ssl_session_tickets off;    
+ssl_stapling on;    
+ssl_stapling_verify on;    
+resolver 8.8.8.8 8.8.4.4 valid=300s;    
+resolver_timeout 5s;    
+add_header Strict-Transport-Security "max-age=63072000; includeSubdomains";    
+add_header X-Frame-Options DENY;    
+add_header X-Content-Type-Options nosniff;    
   
-ssl_dhparam /etc/ssl/certs/dhparam.pem;   
+ssl_dhparam /etc/ssl/certs/dhparam.pem;      
     
 12. sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak    (create a backup for this in case it's not working)
 13. delete /etc/nginx/sites-available/default and create again the files with this content:   
