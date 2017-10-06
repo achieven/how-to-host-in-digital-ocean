@@ -108,5 +108,5 @@ Setup mosh when ssh is not working anymore:
 1. ssh to the hosting machine (linux)    
 2. sudo apt-get install mosh    
 3. sudo iptables -I INPUT 1 -p udp --dport 60000:61000 -j ACCEPT    
-4. install mosh on your local pc 
+4. install mosh on your local pc  
 
